@@ -14,11 +14,28 @@ import {
 } from './action-types';
 
 
+/*
+  query.addListenerForSingleValueEvent(new ValueEventListener() {
+      @Override
+      public void onDataChange(DataSnapshot dataSnapshot){
+          if (dataSnapshot.exists()) {
+            return 1;
+          }
+      }
+  
+      cancelCallbackOrContext(DatabaseError databaseError) {
+  
+      }
+  });
+
+*/
+
 export function createTask(title) {
-  return dispatch => {
-    taskList.push({completed: false, title})
-      .catch(error => dispatch(createTaskError(error)));
-  };
+
+    return dispatch => {
+      taskList.push({completed: false, title})
+        .catch(error => dispatch(createTaskError(error)));
+    };  
 }
 
 export function createTaskError(error) {

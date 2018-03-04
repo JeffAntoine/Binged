@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import { authActions } from 'src/auth';
 import Button from 'src/views/components/button';
 
-import './sign-in-page.css';
+import './sign-in-page.css'; 
 
 
 const SignInPage = ({signInWithGithub, signInWithGoogle}) => {

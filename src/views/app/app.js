@@ -10,6 +10,7 @@ import RequireUnauthRoute from '../components/require-unauth-route';
 import SignInPage from '../pages/sign-in';
 import TasksPage from '../pages/tasks';
 
+//import WelcomePage from '../pages/welcome';
 
 const App = ({authenticated, signOut}) => (
   <div>
@@ -19,12 +20,17 @@ const App = ({authenticated, signOut}) => (
     />
 
     <main>
+     
       <RequireAuthRoute authenticated={authenticated} exact path="/" component={TasksPage}/>
+
       <RequireUnauthRoute authenticated={authenticated} path="/sign-in" component={SignInPage}/>
+
     </main>
   </div>
 );
-
+//<RequireUnauthRoute authenticated ={authenticated} path="" />
+// <RequireUnauthRoute authenticated ={authenticated} path="/welcome" component={WelcomePage} />
+//after main
 App.propTypes = {
   authenticated: PropTypes.bool.isRequired,
   signOut: PropTypes.func.isRequired

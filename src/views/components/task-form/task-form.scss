@@ -6,9 +6,10 @@
 
   @include media-query(540) {
     margin: 80px 0 20px;
+    text-color: white;
   }
 }
-
+//WHAT TO BINGE
 .task-form__input {
   outline: none;
   border: 0;
@@ -29,12 +30,12 @@
   }
 
   &::placeholder {
-    color: #999;
+    color: rgb(255, 255, 255);
     opacity: 1; // firefox native placeholder style has opacity < 1
   }
 
   &:focus::placeholder {
-    color: #777;
+    color: rgb(255, 255, 255);
     opacity: 1;
   }
 
